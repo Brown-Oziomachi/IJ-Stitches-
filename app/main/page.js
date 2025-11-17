@@ -1,5 +1,5 @@
-import TailorShop from "./main";
+import HomePage from "./main";
 
 export default function Page() {
-    return <TailorShop />;
+    return <HomePage />;
 }
