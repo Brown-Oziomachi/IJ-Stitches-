@@ -37,8 +37,8 @@ function LayoutContent({ children }) {
             {/* Brand Info */}
             <div>
               <h3 className="text-3xl font-serif font-bold mb-4 tracking-wider">IJ STITCHES</h3>
-              <p className="text-amber-200 text-lg mb-2 font-light tracking-wide">We Clothe The World</p>
-              <p className="text-amber-100/80 text-sm">Expert Bespoke Tailoring Since 1994</p>
+              <p className="text-amber-50 text-lg mb-2 font-light tracking-wide">We Clothe The World</p>
+              <p className="text-amber-50/80 text-sm">Expert Bespoke Tailoring Since 1994</p>
             </div>
 
             {/* Quick Links */}
@@ -46,22 +46,22 @@ function LayoutContent({ children }) {
               <h4 className="font-semibold text-xl mb-4 text-amber-100">Quick Links</h4>
               <ul className="space-y-2">
                 <li>
-                  <Link href="/" className="text-amber-200/90 hover:text-white transition-colors duration-300 hover:translate-x-1 inline-block">
+                  <Link href="/" className="text-amber-50 hover:text-white transition-colors duration-300 hover:translate-x-1 inline-block">
                     Home
                   </Link>
                 </li>
                 <li>
-                  <Link href="/portfolio" className="text-amber-200/90 hover:text-white transition-colors duration-300 hover:translate-x-1 inline-block">
+                  <Link href="/portfolio" className="text-amber-50 hover:text-white transition-colors duration-300 hover:translate-x-1 inline-block">
                     Portfolio
                   </Link>
                 </li>
                 <li>
-                  <Link href="/about" className="text-amber-200/90 hover:text-white transition-colors duration-300 hover:translate-x-1 inline-block">
+                  <Link href="/about" className="text-amber-50 hover:text-white transition-colors duration-300 hover:translate-x-1 inline-block">
                     About
                   </Link>
                 </li>
                 <li>
-                  <Link href="/contact" className="text-amber-200/90 hover:text-white transition-colors duration-300 hover:translate-x-1 inline-block">
+                  <Link href="/contact" className="text-amber-50 hover:text-white transition-colors duration-300 hover:translate-x-1 inline-block">
                     Contact
                   </Link>
                 </li>
@@ -71,22 +71,22 @@ function LayoutContent({ children }) {
             {/* Contact Info */}
             <div>
               <h4 className="font-semibold text-xl mb-4 text-amber-100">Contact</h4>
-              <ul className="space-y-3 text-amber-200/90">
+              <ul className="space-y-3 text-amber-50">
                 <li className="flex items-center gap-3">
-                  <Phone className="text-amber-300 w-5 h-5" /> +234 701 372 5529
+                  <Phone className="text-amber-50 w-5 h-5" /> +234 701 372 5529
                 </li>
                 <li className="flex items-center gap-3">
-                  <Mail className="text-amber-300 w-5 h-5" /> info@ijstitches.com
+                  <Mail className="text-amber-50 w-5 h-5" /> info@ijstitches.com
                 </li>
                 <li className="flex items-center gap-3">
-                  <MapPin className="text-amber-300 w-5 h-5" /> Lagos, Nigeria
+                  <MapPin className="text-amber-50 w-5 h-5" /> Lagos, Nigeria
                 </li>
               </ul>
             </div>
           </div>
 
           {/* Footer Bottom */}
-          <div className="border-t border-amber-800 pt-8 text-center text-amber-200/80 text-sm">
+          <div className="border-t border-amber-800 pt-8 text-center text-amber-50 text-sm">
             © 2024 IJ STITCHES. All rights reserved. | <span className="font-light italic">We Clothe The World</span>
           </div>
         </div>

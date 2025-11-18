@@ -62,7 +62,7 @@ export default function HomePage() {
     <div>
       {/* HERO SECTION */}
       <div className="relative h-screen overflow-hidden">
-        <div className="absolute inset-0">
+        <div className="absolute inset-0 max-md:mt-35">
           <img
             src="/15.jpg"
             alt="IJ Stitches"
@@ -114,7 +114,7 @@ export default function HomePage() {
       <AutoScrollCarousel requestOrder={requestOrder} />
 
       {/* FULL WIDTH SHOWCASE SECTION */}
-      <div className="w-full bg-white">
+      <div className="w-full bg-gray-50 lg:py-20 py-20">
         <div className="max-w-[1800px] mx-auto px-2 sm:px-6 lg:px-10">
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-3 text-black">
             SIGNATURE COLLECTIONS
@@ -261,7 +261,7 @@ export default function HomePage() {
         </div>
       </div>
 
-      <div className="bg-gradient-to-b from-white to-gray-50 py-20 text-black">
+      <div className="bg-gray-50 py-20 text-black">
         <div className="container mx-auto px-4">
           <h2 className="text-4xl font-bold text-center mb-4 text-gray-900">BROWSE BY CATEGORY</h2>
           <p className="text-center text-gray-600 mb-12 text-lg">Explore our diverse portfolio of custom tailoring</p>
