@@ -90,7 +90,7 @@ export default function CategoryCarousel({
         )}
       </div>
 
-      <div className="p-6 text-center bg-gradient-to-b from-white to-gray-50">
+      <div className="p-6 text-center ">
         <h3 className="font-bold text-xl mb-3 text-gray-900">
           {category.name}
         </h3>

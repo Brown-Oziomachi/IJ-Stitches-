@@ -5,9 +5,7 @@ export default function ItemViewModal({ item, onClose, requestOrder }) {
   if (!item) return null;
 
   // Mock color variations - you can replace this with actual data from your item
-  const colorVariations = [
-    { color: "Charcoal Black", image: item.frontImage },
-  ];
+  const colorVariations = [{ color: "Charcoal Black", image: item.frontImage }];
 
   return (
     <div
@@ -36,20 +34,15 @@ export default function ItemViewModal({ item, onClose, requestOrder }) {
                     alt="Front view"
                     className="w-full h-auto shadow-xl"
                   />
-                 
                 </div>
 
                 {item.backImage && item.backImage !== item.frontImage && (
-                  <div className="relative group">
-                   
-                  
-                  </div>
+                  <div className="relative group"></div>
                 )}
               </div>
 
               {/* Color Variations */}
               <div className="border-t pt-6">
-               
                 <div className="space-y-4">
                   {colorVariations.map((variant, index) => (
                     <div
@@ -61,28 +54,24 @@ export default function ItemViewModal({ item, onClose, requestOrder }) {
                         alt={variant.color}
                         className="w-full h-auto"
                       />
-                      <div className="p-3 bg-gray-50 text-center">
-                       
-                      </div>
+                      <div className="p-3 bg-gray-50 text-center"></div>
                     </div>
                   ))}
                 </div>
               </div>
             </div>
 
-            {/* Fixed Product Info Section */}
-            <div className="text-black flex flex-col justify-center p-8 overflow-hidden">
-              <h2 className="text-4xl font-bold mb-2 text-gray-900">
-                {item.title ||
-                  `Custom ${
-                    item.category.charAt(0).toUpperCase() +
-                    item.category.slice(1)
-                  }`}
+            {/* Scrollable Product Info Section */}
+            <div className="text-black flex flex-col p-8 overflow-y-auto py-2">
+              <h2 className="text-3xl font-bold mb-2 text-gray-900  text-center lg:mt-50">
+                {item.title && item.title.trim() !== ""
+                  ? item.title
+                  : `Custom ${
+                      item.category.charAt(0).toUpperCase() +
+                      item.category.slice(1)
+                    }`}
               </h2>
-
-
               <div className="mb-8 space-y-4">
-
                 <div className="bg-gray-50 p-6 rounded-lg">
                   <h3 className="font-bold mb-3 text-lg">
                     IJ Stitches Tailoring Service
@@ -99,9 +88,9 @@ export default function ItemViewModal({ item, onClose, requestOrder }) {
 
               <button
                 onClick={() => {
-                  const phoneNumber = "2347013725529"; // Replace with actual tailor's WhatsApp number
+                  const phoneNumber = "2349050622081"; // Replace with actual tailor's WhatsApp number
                   const message = encodeURIComponent(
-                    `Hi! I'm interested in this design: ${
+                    `Hi! IJ Stitches I'm interested in this design: ${
                       item.title ||
                       `Custom ${
                         item.category.charAt(0).toUpperCase() +
@@ -115,7 +104,7 @@ export default function ItemViewModal({ item, onClose, requestOrder }) {
                   );
                   onClose();
                 }}
-                className="w-full bg-gradient-to-r from-amber-700 to-amber-900 text-white py-5 hover:from-amber-800 hover:to-amber-950 transition font-bold text-lg rounded-lg shadow-xl"
+                className="w-full cursor-pointer bg-gradient-to-r from-amber-700 to-amber-900 text-white py-5 hover:from-amber-800 hover:to-amber-950 transition font-bold text-lg rounded-lg shadow-xl"
               >
                 CHAT TAILOR
               </button>

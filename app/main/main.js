@@ -268,7 +268,7 @@ export default function HomePage() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mx-auto max-w-10xl">
             {[
               { name: 'CUSTOM SHIRTS', category: 'shirts', items: portfolioData.shirts },
-              { name: 'BESPOKE SUITS', category: 'suits', items: portfolioData.suits },
+              { name: 'IJ SUITS', category: 'suits', items: portfolioData.suits },
               { name: 'NATIVE WEAR', category: 'native', items: portfolioData.native }
             ].map((cat, idx) => (
               <CategoryCarousel
@@ -301,7 +301,7 @@ export default function HomePage() {
                 </div>
               </div>
 
-              <div className="p-6 text-center bg-gradient-to-b from-white to-gray-50">
+              <div className="p-6 text-center">
                 <h3 className="font-bold text-xl mb-3 text-gray-900">
                   CRAFTSMANSHIP IN ACTION
                 </h3>

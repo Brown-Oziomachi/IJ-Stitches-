@@ -10,7 +10,7 @@ export default function NativePage() {
     const items = portfolioData.native;
 
     const handleWhatsAppContact = () => {
-        const phoneNumber = "2347013725529";
+        const phoneNumber = "2349050622081"; // Replace with actual WhatsApp number
         const message = encodeURIComponent("Hi IJ-Stitches! I didn't find the native attire design I'm looking for in your portfolio. I'd like to discuss a custom design with you.");
         window.open(`https://wa.me/${phoneNumber}?text=${message}`, '_blank');
     };
@@ -47,7 +47,7 @@ export default function NativePage() {
                         </p>
                         <button
                             onClick={handleWhatsAppContact}
-                            className="inline-flex items-center gap-3 max-md:text-sm bg-gradient-to-r from-amber-600 to-orange-600 text-white px-8 py-4 rounded-full font-semibold text-lg hover:from-amber-700 hover:to-orange-700 transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl"
+                            className="inline-flex items-center cursor-pointer gap-3 max-md:text-sm bg-gradient-to-r from-amber-600 to-orange-600 text-white px-8 py-4 rounded-full font-semibold text-lg hover:from-amber-700 hover:to-orange-700 transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl"
                         >
                             <MessageCircle size={24} />
                             Discuss Custom Design on WhatsApp

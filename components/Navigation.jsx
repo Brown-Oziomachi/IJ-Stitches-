@@ -47,8 +47,8 @@ export default function Navigation() {
                 <Link
                   key={link.href}
                   href={link.href}
-                  className={`hover:text-gray-300 transition font-medium text-sm xl:text-base ${
-                    pathname === link.href ? "text-gray-300" : ""
+                  className={`hover:text-amber-700 transition font-medium text-sm xl:text-base ${
+                    pathname === link.href ? "text-amber-600" : ""
                   }`}
                 >
                   {link.label}
