@@ -61,18 +61,18 @@ export default function HomePage() {
   return (
     <div>
       {/* HERO SECTION */}
-      <div className="relative h-screen overflow-hidden">
-        <div className="absolute inset-0 max-md:mt-35">
+      <div className="relative h-screen overflow-hidden ">
+        <div className="absolute inset-0 max-md:mt-35 ">
           <img
-            src="/15.jpg"
+            src="/5.jpg"
             alt="IJ Stitches"
-            className="w-full   object-center brightness-75 blur-[1px]"
+            className="w-full object-center brightness-100 object-cover"
           />
         </div>
 
-        <div className="absolute inset-0"></div>
+        <div className="absolute inset-0 "></div>
 
-        <div className="relative h-full flex items-center">
+        <div className="relative h-full flex items-center ">
           <div className="container mx-auto px-8 md:px-16">
             <div className="max-w-3xl">
               <h1 className="text-5xl md:text-8xl font-bold text-white mb-6 leading-tight drop-shadow-xl">
@@ -114,7 +114,7 @@ export default function HomePage() {
       <AutoScrollCarousel requestOrder={requestOrder} />
 
       {/* FULL WIDTH SHOWCASE SECTION */}
-      <div className="w-full bg-gray-50 lg:py-20 py-20">
+      <div className="w-full bg-gradient-to-br from-amber-50 via-orange-50 to-red-50 lg:py-20 py-20">
         <div className="max-w-[1800px] mx-auto px-2 sm:px-6 lg:px-10">
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-3 text-black">
             SIGNATURE COLLECTIONS
@@ -190,7 +190,7 @@ export default function HomePage() {
       </div>
 
       {/* VIDEO SHOWCASE SECTION - FIXED */}
-      <div className="w-full bg-gray-50 py-20">
+      <div className="w-full bg-gradient-to-br from-amber-50 via-orange-50 to-red-50 py-20">
         <div className="max-w-[1800px] mx-auto px-2 sm:px-6 lg:px-10">
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-3 text-black">
             BEHIND THE STITCHES
@@ -251,7 +251,7 @@ export default function HomePage() {
         </div>
       </div>
 
-      <div className="container mx-auto px-4 py-20 text-black">
+      <div className="container mx-auto px-4 py-20 text-black ">
         <h2 className="text-4xl font-bold text-center mb-4 text-gray-900">FEATURED DESIGNS</h2>
         <p className="text-center text-gray-600 mb-12 text-lg">Showcase of our recent custom tailoring work</p>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -261,7 +261,7 @@ export default function HomePage() {
         </div>
       </div>
 
-      <div className="bg-gray-50 py-20 text-black">
+      <div className="bg-gradient-to-br from-amber-50 via-orange-50 to-red-50 py-20 text-black">
         <div className="container mx-auto px-4">
           <h2 className="text-4xl font-bold text-center mb-4 text-gray-900">BROWSE BY CATEGORY</h2>
           <p className="text-center text-gray-600 mb-12 text-lg">Explore our diverse portfolio of custom tailoring</p>
@@ -280,7 +280,7 @@ export default function HomePage() {
             ))}
 
             {/* Video Card */}
-            <div className="bg-orange-50 overflow-hidden">
+            <div className="bg-gradient-to-br from-amber-50 via-orange-50 to-red-50 overflow-hidden">
               <div className="relative group">
                 <video
                   className="w-full h-[500px] object-cover"

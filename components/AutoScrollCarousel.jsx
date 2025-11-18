@@ -16,6 +16,16 @@ export default function AutoScrollCarousel({ requestOrder }) {
     { id: 7, src: "/8.jpg", item: portfolioData.suits[1] },
     { id: 8, src: "/10.jpg", item: portfolioData.native[0] },
     { id: 9, src: "/15.jpg", item: portfolioData.native[0] },
+    { id: 10, src: "/12.jpg", item: portfolioData.native[0] },
+    { id: 11, src: "/14.jpg", item: portfolioData.native[0] },
+    { id: 12, src: "/16.jpg", item: portfolioData.native[0] },
+    { id: 13, src: "/13.jpg", item: portfolioData.native[0] },
+    { id: 14, src: "/18.jpg", item: portfolioData.native[0] },
+    { id: 15, src: "/19.jpg", item: portfolioData.native[0] },
+    { id: 16, src: "/20.jpg", item: portfolioData.native[0] },
+    { id: 17, src: "/21.jpg", item: portfolioData.native[0] },
+    { id: 18, src: "/22.jpg", item: portfolioData.native[0] },
+    { id: 19, src: "/23.jpg", item: portfolioData.native[0] },
   ];
 
   const handleImageClick = (item) => {
@@ -28,7 +38,7 @@ export default function AutoScrollCarousel({ requestOrder }) {
 
   return (
     <>
-      <div className="lg:mt-20 bg-gradient-to-b from-gray-50 to-white overflow-hidden relative">
+      <div className="lg:mt-20 bg-gradient-to-br from-amber-50 via-orange-50 to-red-50 overflow-hidden relative">
         <div className="container mx-auto px-4 mb-20">
           <h2 className="text-4xl font-bold text-center text-gray-900">
             TRADITIONAL NATIVE WEAR SHOWCASE
@@ -81,23 +91,30 @@ export default function AutoScrollCarousel({ requestOrder }) {
       {/* Zoom Modal */}
       {zoomedImage && (
         <div
-          className="fixed inset-0 mt-35 bg-white z-50 flex items-center justify-center p-4"
+          className="fixed inset-0 bg-white z-50 flex items-center justify-center md:p-4"
           onClick={closeZoom}
         >
           <button
             onClick={closeZoom}
-            className="absolute top-4 right-4 bg-white/10 hover:bg-white/20 text-white p-3 rounded-full transition z-[101]"
+            className="absolute top-4 right-4 bg-black hover:bg-black text-white p-3 rounded-full transition z-[101]"
           >
             <X size={32} />
           </button>
 
-          <div className="relative max-w-6xl max-h-[90vh] w-full h-full flex items-center justify-center">
+          <div className="relative w-full h-full md:max-w-6xl md:max-h-[90vh] flex items-center justify-center">
             <img
               src={zoomedImage.src}
               alt="Zoomed garment"
-              className="max-w-full max-h-full object-contain"
+              className="w-full h-full md:max-w-full md:max-h-full object-contain md:object-contain"
               onClick={(e) => e.stopPropagation()}
             />
+
+            {/* Watermark */}
+            <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+              <div className="text-white/30 text-4xl md:text-6xl font-bold tracking-widest transform rotate-[-45deg] select-none">
+                IJ STITCHES
+              </div>
+            </div>
           </div>
         </div>
       )}

@@ -16,7 +16,7 @@ export default function OrderRequestPage() {
     const handleSubmit = (e) => {
         e.preventDefault();
 
-        const tailorNumber = '2347013725529';
+        const tailorNumber = '2349050622081'; // Replace with actual tailor's WhatsApp number
         const lines = [];
         lines.push('*🎨 CUSTOM ORDER REQUEST - IJ STITCHES*');
         lines.push('');

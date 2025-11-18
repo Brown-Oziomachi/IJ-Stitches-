@@ -36,31 +36,25 @@ export default function ItemViewModal({ item, onClose, requestOrder }) {
                     alt="Front view"
                     className="w-full h-auto shadow-xl"
                   />
-                
+                 
                 </div>
 
                 {item.backImage && item.backImage !== item.frontImage && (
                   <div className="relative group">
-                    <img
-                      src={item.backImage}
-                      alt="Back view"
-                      className="w-full h-auto shadow-xl"
-                    />
-                 
+                   
+                  
                   </div>
                 )}
               </div>
 
               {/* Color Variations */}
               <div className="border-t pt-6">
-                <h3 className="text-xl font-bold mb-4 text-black">
-                  Available in Other Colors
-                </h3>
+               
                 <div className="space-y-4">
                   {colorVariations.map((variant, index) => (
                     <div
                       key={index}
-                      className="border-2 border-gray-200 rounded-lg overflow-hidden"
+                      className="shadow-2xl border-gray-200  overflow-hidden"
                     >
                       <img
                         src={variant.image}
@@ -68,9 +62,7 @@ export default function ItemViewModal({ item, onClose, requestOrder }) {
                         className="w-full h-auto"
                       />
                       <div className="p-3 bg-gray-50 text-center">
-                        <p className="font-semibold text-gray-800">
-                          {variant.color}
-                        </p>
+                       
                       </div>
                     </div>
                   ))}
@@ -86,22 +78,14 @@ export default function ItemViewModal({ item, onClose, requestOrder }) {
                     item.category.charAt(0).toUpperCase() +
                     item.category.slice(1)
                   }`}
-                          </h2>
-                          
+              </h2>
+
+
               <div className="mb-8 space-y-4">
-                <div className="bg-gray-50 p-6 rounded-lg">
-                  <h3 className="font-bold mb-3 text-lg">About This Design</h3>
-                  <p className="text-gray-700 leading-relaxed">
-                    A charcoal black long sleeve kaftan with swavroski buttons
-                    and a patterned pocket flap for a clean, stylish look. Each
-                    piece is custom-tailored to your exact measurements and
-                    specifications.
-                  </p>
-                </div>
 
                 <div className="bg-gray-50 p-6 rounded-lg">
                   <h3 className="font-bold mb-3 text-lg">
-                    Bespoke Tailoring Service
+                    IJ Stitches Tailoring Service
                   </h3>
                   <ul className="text-gray-700 space-y-2">
                     <li>✓ Personal measurement session</li>
@@ -116,17 +100,14 @@ export default function ItemViewModal({ item, onClose, requestOrder }) {
               <button
                 onClick={() => {
                   const phoneNumber = "2347013725529"; // Replace with actual tailor's WhatsApp number
-                  const itemTitle =
-                    item.title ||
-                    `Custom ${
-                      item.category.charAt(0).toUpperCase() +
-                      item.category.slice(1)
-                    }`;
-                  const itemUrl = window.location.href; // Current page URL
-                  const imageUrl = item.frontImage; // Full image URL
-
                   const message = encodeURIComponent(
-                    `Hi! I'm interested in this design:\n\n*${itemTitle}*\n\nImage: ${imageUrl}\n\nPage: ${itemUrl}`
+                    `Hi! I'm interested in this design: ${
+                      item.title ||
+                      `Custom ${
+                        item.category.charAt(0).toUpperCase() +
+                        item.category.slice(1)
+                      }`
+                    }`
                   );
                   window.open(
                     `https://wa.me/${phoneNumber}?text=${message}`,

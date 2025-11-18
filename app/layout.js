@@ -11,7 +11,7 @@ function LayoutContent({ children }) {
   const { viewingItem, handleCloseItemView, requestOrder, handleViewItem, showCart, setShowCart, orderRequests, updateQuantity, removeFromOrders } = useOrders();
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gradient-to-br from-amber-50 via-orange-50 to-red-50">
       <Navigation />
 
       <main>{children}</main>
@@ -38,7 +38,7 @@ function LayoutContent({ children }) {
             <div>
               <h3 className="text-3xl font-serif font-bold mb-4 tracking-wider">IJ STITCHES</h3>
               <p className="text-amber-50 text-lg mb-2 font-light tracking-wide">We Clothe The World</p>
-              <p className="text-amber-50/80 text-sm">Expert Bespoke Tailoring Since 1994</p>
+              <p className="text-amber-50/80 text-sm">Expert Tailoring Since 2003</p>
             </div>
 
             {/* Quick Links */}
@@ -73,13 +73,13 @@ function LayoutContent({ children }) {
               <h4 className="font-semibold text-xl mb-4 text-amber-100">Contact</h4>
               <ul className="space-y-3 text-amber-50">
                 <li className="flex items-center gap-3">
-                  <Phone className="text-amber-50 w-5 h-5" /> +234 701 372 5529
+                  <Phone className="text-amber-50 w-5 h-5" /> +234 813 081 1263
                 </li>
                 <li className="flex items-center gap-3">
-                  <Mail className="text-amber-50 w-5 h-5" /> info@ijstitches.com
+                  <Mail className="text-amber-50 w-5 h-5" /> jeecee54@gmail.com
                 </li>
                 <li className="flex items-center gap-3">
-                  <MapPin className="text-amber-50 w-5 h-5" /> Lagos, Nigeria
+                  <MapPin className="text-amber-50 w-5 h-5" />Abia State, Nigeria
                 </li>
               </ul>
             </div>
@@ -87,7 +87,7 @@ function LayoutContent({ children }) {
 
           {/* Footer Bottom */}
           <div className="border-t border-amber-800 pt-8 text-center text-amber-50 text-sm">
-            © 2024 IJ STITCHES. All rights reserved. | <span className="font-light italic">We Clothe The World</span>
+            © {new Date().getFullYear()} IJ STITCHES. All rights reserved. | <span className="font-light italic">We Clothe The World</span>
           </div>
         </div>
       </footer>

@@ -49,8 +49,8 @@ function ImageCarousel({ images, items, requestOrder }) {
 export default function AboutPage() {
     const { requestOrder } = useOrders();
 
-    const suitImages = ['/suit12.jpg', '/suit13.jpg', '/suit12.jpg'];
-    const suitItems = [portfolioData.suits[0], portfolioData.suits[1], portfolioData.suits[0]];
+    const suitImages = ['/suit12.jpg', '/suit13.jpg', '/suit12.jpg', '/suit14.jpg'];
+    const suitItems = [portfolioData.suits[0], portfolioData.suits[1], portfolioData.suits[0], portfolioData.suits[1]];
 
     const nativeWearImages = ['/2.jpg', '/5.jpg', '/7.jpg'];
     const nativeWearItems = [portfolioData.native[0], portfolioData.native[1], portfolioData.native[2]];
@@ -68,11 +68,11 @@ export default function AboutPage() {
                 <div className="absolute top-20 -right-20 w-64 h-64 bg-amber-300 rounded-full opacity-15"></div>
                 <div className="absolute -bottom-20 -left-20 w-64 h-64 bg-amber-300 rounded-full opacity-15"></div>
 
-                <div className="absolute inset-0 flex items-center justify-center">
+                <div className="absolute inset-0 flex items-center justify-center mt-20">
                     <div className="text-center text-white z-10 px-4">
-                        <h1 className="text-5xl md:text-6xl font-bold mb-6">About Us</h1>
+                        <h1 className="text-5xl md:text-6xl font-bold mb-6 mt-8">About Us</h1>
                         <p className="text-lg md:text-xl max-w-3xl mx-auto leading-relaxed">
-                            Founded in 2017 and based in Abeokuta, Nigeria, Grandeur Tailors is a custom tailor shop with a strong commitment and dedication to excellence.
+                            Founded in 2003 and based in Aba, Abia state, Nigeria, IJ-Stitches Tailors is a custom tailor shop with a strong commitment and dedication to excellence.
                         </p>
                     </div>
                 </div>
@@ -83,16 +83,16 @@ export default function AboutPage() {
                 <div className="flex items-center justify-center p-8 md:p-16 lg:p-20 bg-gray-50">
                     <div className="max-w-xl">
                         <h2 className="text-4xl md:text-5xl font-bold mb-6 text-gray-900">Meet The Master Tailor</h2>
-                        <h3 className="text-2xl md:text-3xl font-semibold mb-8 text-gray-700">Joel I. Onyi MD</h3>
+                        <h3 className="text-2xl md:text-3xl font-semibold mb-8 text-gray-700">Joel I. Onyi. MD</h3>
                         <p className="text-lg md:text-xl text-gray-700 mb-6 leading-relaxed">
-                            With over 30 years of expertise in bespoke tailoring, Chief Ibrahim Joel founded IJ STITCHES with a passion for creating garments that embody elegance, precision, and individuality.
+                            With over 22 years of experience in tailoring,  Joel Onyi founded IJ STITCHES with a passion for creating garments that embody elegance, precision, and individuality.
                         </p>
                         <p className="text-lg md:text-xl text-gray-700 mb-8 leading-relaxed">
                             From traditional African attire to contemporary European suits, every piece is crafted with meticulous attention to detail, ensuring the perfect fit and finish for each client.
                         </p>
                         <blockquote className="border-l-4 border-black pl-6 italic text-gray-600 text-lg">
                             "We don't just make clothes—we create confidence, we celebrate heritage, and we craft masterpieces that tell your story."
-                            <span className="block mt-4 not-italic font-semibold text-black text-xl">- Chief Ibrahim Joel</span>
+                            <span className="block mt-4 not-italic font-semibold text-black text-xl">-Joel I. Onyi</span>
                         </blockquote>
                     </div>
                 </div>
@@ -109,7 +109,7 @@ export default function AboutPage() {
             <div className="grid md:grid-cols-2 min-h-screen">
                 <div className="flex flex-col justify-center p-8 md:p-16 lg:p-20 bg-white">
                     <div className="max-w-xl mb-8">
-                        <h2 className="text-4xl md:text-5xl font-bold mb-8 text-gray-900 uppercase">Bespoke Suit Tailoring</h2>
+                        <h2 className="text-4xl md:text-5xl font-bold mb-8 text-gray-900 uppercase">IJ Suit Tailoring</h2>
                         <p className="text-lg md:text-xl text-gray-700 leading-relaxed">
                             Each suit is meticulously crafted to your exact measurements and style preferences. Our master tailors use traditional techniques combined with modern precision to create garments that fit like a second skin and make a lasting impression.
                         </p>
@@ -117,6 +117,7 @@ export default function AboutPage() {
                     <div className="grid grid-cols-2 gap-4 max-w-xl">
                         <img src="/suit12.jpg" alt="Suit detail 1" className="w-full h-64 object-cover rounded-lg" />
                         <img src="/suit13.jpg" alt="Suit detail 2" className="w-full h-64 object-cover rounded-lg" />
+
                     </div>
                 </div>
                 <div className="relative bg-gray-200 p-5">
@@ -133,7 +134,7 @@ export default function AboutPage() {
                     <div className="max-w-xl mb-8">
                         <h2 className="text-4xl md:text-5xl font-bold mb-8 text-gray-900 uppercase">Traditional Native Wear</h2>
                         <p className="text-lg md:text-xl text-gray-700 leading-relaxed">
-                            We honor African heritage through our exquisite traditional wear collection. Our Agbadas, Kaftans, and Senator styles feature intricate embroidery and authentic designs that celebrate cultural richness and pride.
+                            We honor African heritage through our exquisite traditional wear collection. Our Native, Suit, and Senator styles feature intricate embroidery and authentic designs that celebrate cultural richness and pride.
                         </p>
                     </div>
                     <div className="grid grid-cols-2 gap-4 max-w-xl">
