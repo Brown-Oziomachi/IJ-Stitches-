@@ -9,7 +9,6 @@ export default function PortfolioPage() {
 
     const allItems = [
         ...portfolioData.shirts,
-        ...portfolioData.trousers,
         ...portfolioData.suits,
         ...portfolioData.native
     ];

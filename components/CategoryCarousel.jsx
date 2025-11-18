@@ -9,7 +9,19 @@ export default function CategoryCarousel({
   onViewItem,
 }) {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const items = category.items.slice(0, 4);
+
+  // Add safety check to prevent undefined error
+  const allItems = category?.items || [];
+  const items = allItems.slice(0, 4);
+
+  // Return early if no items
+  if (items.length === 0) {
+    return (
+      <div className="bg-orange-50 p-6 text-center">
+        <p className="text-gray-500">No items available</p>
+      </div>
+    );
+  }
 
   const nextSlide = () => {
     setCurrentIndex((prev) => (prev + 1) % items.length);
@@ -22,7 +34,7 @@ export default function CategoryCarousel({
   const currentItem = items[currentIndex];
 
   return (
-    <div className="bg-orange-50 overflow-hidden">
+    <div className="bg-orange-50 overflow-hidden items-center justify-center ">
       <div className="relative group">
         <img
           src={currentItem.frontImage}
@@ -49,7 +61,7 @@ export default function CategoryCarousel({
 
         <button
           onClick={() => requestOrder(currentItem)}
-          className="absolute bottom-4 left-4 right-4 bg-gradient-to-r from-gray-900 to-black text-white py-3 px-4 text-sm font-bold opacity-100 md:opacity-0 md:group-hover:opacity-100 transition hover:from-black hover:to-gray-900"
+          className="absolute bottom-4 left-4 right-4 bg-gradient-to-r from-amber-900 via-amber-800 to-amber-900 text-white py-3 px-4 text-sm font-bold opacity-100 md:opacity-0 md:group-hover:opacity-100 transition hover:from-black hover:to-gray-900"
         >
           REQUEST THIS DESIGN
         </button>
@@ -86,7 +98,7 @@ export default function CategoryCarousel({
           href={`/${category.category}`}
           className="text-sm text-black font-semibold hover:underline inline-flex items-center gap-2"
         >
-          VIEW ALL {category.items.length} DESIGNS →
+          VIEW ALL {allItems.length} DESIGNS →
         </Link>
       </div>
     </div>

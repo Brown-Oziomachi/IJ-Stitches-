@@ -1,4 +1,5 @@
 "use client";
+import { useEffect, useRef } from 'react';
 import Link from 'next/link';
 import AutoScrollCarousel from '@/components/AutoScrollCarousel';
 import PortfolioCard from '@/components/PortfolioCard';
@@ -6,9 +7,51 @@ import CategoryCarousel from '@/components/CategoryCarousel';
 import { portfolioData } from '@/lib/portfolioData';
 import { useOrders } from '@/lib/context/OrderContext';
 
-
 export default function HomePage() {
   const { requestOrder, handleViewItem } = useOrders();
+  const video1Ref = useRef(null);
+  const video2Ref = useRef(null);
+
+  // Fix React muted bug - force muted attribute
+  useEffect(() => {
+    console.log('=== VIDEO DEBUG ===');
+
+    if (video1Ref.current) {
+      console.log('Video 1 element found:', video1Ref.current);
+      video1Ref.current.muted = true;
+      video1Ref.current.defaultMuted = true;
+      video1Ref.current.play()
+        .then(() => console.log('Video 1 playing'))
+        .catch(err => console.error(' Video 1 error:', err));
+    } else {
+      console.error(' Video 1 ref not found');
+    }
+
+    if (video2Ref.current) {
+      console.log('Video 2 element found:', video2Ref.current);
+      console.log('Video 2 src:', video2Ref.current.src);
+      console.log('Video 2 readyState:', video2Ref.current.readyState);
+      video2Ref.current.muted = true;
+      video2Ref.current.defaultMuted = true;
+
+      // Add load event listener
+      video2Ref.current.addEventListener('loadeddata', () => {
+        console.log(' Video 2 data loaded');
+      });
+
+      video2Ref.current.addEventListener('error', (e) => {
+        console.error(' Video 2 error event:', e);
+        console.error('Error code:', video2Ref.current.error?.code);
+        console.error('Error message:', video2Ref.current.error?.message);
+      });
+
+      video2Ref.current.play()
+        .then(() => console.log(' Video 2 playing'))
+        .catch(err => console.error('Video 2 play error:', err));
+    } else {
+      console.error(' Video 2 ref not found');
+    }
+  }, []);
 
   const featuredItems = [
     ...portfolioData.shirts.slice(0, 2),
@@ -21,9 +64,9 @@ export default function HomePage() {
       <div className="relative h-screen overflow-hidden">
         <div className="absolute inset-0">
           <img
-            src="/sow.jpg"
+            src="/15.jpg"
             alt="IJ Stitches"
-            className="w-full h-full object-cover object-center brightness-75 blur-[1px]"
+            className="w-full   object-center brightness-75 blur-[1px]"
           />
         </div>
 
@@ -45,7 +88,7 @@ export default function HomePage() {
               <div className="flex flex-wrap gap-4">
                 <Link
                   href="/portfolio"
-                  className="bg-amber-400 text-black px-10 py-4 text-lg font-bold hover:bg-amber-300 transition shadow-2xl rounded"
+                  className="bg-gradient-to-r from-amber-900 via-amber-800 to-amber-900 text-white px-10 py-4 text-lg font-bold hover:bg-amber-300 transition shadow-2xl rounded"
                 >
                   VIEW PORTFOLIO
                 </Link>
@@ -100,7 +143,7 @@ export default function HomePage() {
                   </p>
                   <Link
                     href="/suits"
-                    className="inline-block bg-white text-black px-6 sm:px-8 py-3 font-bold hover:bg-gray-200 transition rounded-lg shadow-xl text-sm sm:text-base"
+                    className="inline-block bg-gradient-to-r from-amber-900 via-amber-800 to-amber-900 text-white px-6 sm:px-8 py-3 font-bold hover:bg-gray-200 transition rounded-lg shadow-xl text-sm sm:text-base"
                   >
                     EXPLORE COLLECTION
                   </Link>
@@ -131,7 +174,7 @@ export default function HomePage() {
                   </p>
                   <Link
                     href="/native"
-                    className="inline-block bg-white text-black px-6 sm:px-8 py-3 font-bold hover:bg-gray-200 transition rounded-lg shadow-xl text-sm sm:text-base"
+                    className="inline-blockn bg-gradient-to-r from-amber-900 via-amber-800 to-amber-900 text-white px-6 sm:px-8 py-3 font-bold hover:bg-gray-200 transition rounded-lg shadow-xl text-sm sm:text-base"
                   >
                     EXPLORE COLLECTION
                   </Link>
@@ -142,6 +185,68 @@ export default function HomePage() {
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+      </div>
+
+      {/* VIDEO SHOWCASE SECTION - FIXED */}
+      <div className="w-full bg-gray-50 py-20">
+        <div className="max-w-[1800px] mx-auto px-2 sm:px-6 lg:px-10">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-3 text-black">
+            BEHIND THE STITCHES
+          </h2>
+          <p className="text-center text-gray-500 mb-12 sm:mb-16 text-base sm:text-lg">
+            Watch our craftsmanship come to life
+          </p>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+            {/* Video 1 */}
+            <div className="relative group overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 bg-gray-900">
+              <video
+                ref={video1Ref}
+                className="w-full h-[700px] object-cover"
+                autoPlay
+                muted
+                loop
+                playsInline
+                preload="metadata"
+              >
+                <source src="/video4.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
+              <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent group-hover:from-black/20 transition-all pointer-events-none"></div>
+
+              {/* Watermark */}
+              <div className="absolute inset-0 flex items-center justify-center text-white opacity-60 pointer-events-none">
+                <p className="text-4xl font-bold tracking-wider drop-shadow-lg">IJ STITCHES</p>
+              </div>
+
+            </div>
+
+            {/* Video 2 */}
+            <div className="relative group overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 bg-amber-900">
+              <video
+                ref={video2Ref}
+                className="w-full h-[700px] object-cover"
+                autoPlay
+                muted
+                loop
+                playsInline
+                preload="metadata"
+              >
+                <source src="/video5.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
+              <div className="absolute inset-0 bg-gradient-to-t from-amber-900/40 via-transparent to-transparent group-hover:from-amber-900/20 transition-all pointer-events-none"></div>
+
+              <div className="absolute inset-0 flex items-center justify-center text-white opacity-60 pointer-events-none">
+                <p className="text-4xl font-bold tracking-wider drop-shadow-lg">IJ STITCHES</p>
+              </div>
+
+            </div>
+          </div>
+
+          <div className="text-center">
           </div>
         </div>
       </div>
@@ -160,10 +265,9 @@ export default function HomePage() {
         <div className="container mx-auto px-4">
           <h2 className="text-4xl font-bold text-center mb-4 text-gray-900">BROWSE BY CATEGORY</h2>
           <p className="text-center text-gray-600 mb-12 text-lg">Explore our diverse portfolio of custom tailoring</p>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mx-auto max-w-10xl">
             {[
               { name: 'CUSTOM SHIRTS', category: 'shirts', items: portfolioData.shirts },
-              { name: 'TAILORED TROUSERS', category: 'trousers', items: portfolioData.trousers },
               { name: 'BESPOKE SUITS', category: 'suits', items: portfolioData.suits },
               { name: 'NATIVE WEAR', category: 'native', items: portfolioData.native }
             ].map((cat, idx) => (
@@ -174,6 +278,41 @@ export default function HomePage() {
                 onViewItem={handleViewItem}
               />
             ))}
+
+            {/* Video Card */}
+            <div className="bg-orange-50 overflow-hidden">
+              <div className="relative group">
+                <video
+                  className="w-full h-[500px] object-cover"
+                  autoPlay
+                  muted
+                  loop
+                  playsInline
+                  preload="metadata"
+                >
+                  <source src="/video6.mp4" type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+
+                {/* Watermark */}
+                <div className="absolute inset-0 flex items-center justify-center text-white opacity-50 pointer-events-none">
+                  <p className="text-3xl font-bold tracking-wider drop-shadow-lg">IJ STITCHES</p>
+                </div>
+              </div>
+
+              <div className="p-6 text-center bg-gradient-to-b from-white to-gray-50">
+                <h3 className="font-bold text-xl mb-3 text-gray-900">
+                  CRAFTSMANSHIP IN ACTION
+                </h3>
+                <Link
+                  href="/portfolio"
+                  className="text-sm text-black font-semibold hover:underline inline-flex items-center gap-2"
+                >
+                  VIEW FULL PORTFOLIO →
+                </Link>
+              </div>
+            </div>
           </div>
         </div>
       </div>

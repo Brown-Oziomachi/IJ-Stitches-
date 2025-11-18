@@ -11,6 +11,7 @@ export default function AutoScrollCarousel({ requestOrder }) {
     { id: 6, src: "/7.jpg", item: portfolioData.suits[0] },
     { id: 7, src: "/8.jpg", item: portfolioData.suits[1] },
     { id: 8, src: "/10.jpg", item: portfolioData.native[0] },
+    { id: 9, src: "/15.jpg", item: portfolioData.native[0] },
   ];
 
   return (
@@ -54,7 +55,7 @@ export default function AutoScrollCarousel({ requestOrder }) {
                   <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                   <button
                     onClick={() => requestOrder(item.item)}
-                    className="absolute bottom-6 left-6 right-6 bg-white text-black py-4 px-6 font-bold opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-300 hover:bg-gray-100 z-10 rounded-lg shadow-xl"
+                    className="absolute bottom-6 left-6 right-6 bg-gradient-to-r from-amber-900 via-amber-800 to-amber-900 text-white py-4 px-6 font-bold opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-300 hover:bg-gray-100 z-10 rounded-lg shadow-xl"
                   >
                     REQUEST THIS DESIGN
                   </button>
