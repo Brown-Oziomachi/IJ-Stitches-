@@ -12,12 +12,13 @@ export default function OrderPanel({
   if (!showCart) return null;
 
   return (
+    <main className="relative">
     <div
       className="fixed inset-0 bg-[url('/sow.jpg')] bg-cover bg-center z-50 flex justify-end"
       onClick={() => setShowCart(false)}
     >
       <div
-        className="bg-white/80 text-black w-full md:w-[450px] h-full overflow-y-auto shadow-2xl"
+        className="bg-white/90 text-black w-full md:w-[450px] h-full overflow-y-auto shadow-2xl"
         onClick={(e) => e.stopPropagation()}
       >
         <div className="p-8">
@@ -30,7 +31,7 @@ export default function OrderPanel({
               <X size={48} />
             </button>
           </div>
-
+            <img src="ij-logo.png" className="h-20 w-20 absolute left-3 top-5 max-md:top-2 max-md:h-10 max-md:w-10"/>
           {orderRequests.length === 0 ? (
             <div className="text-center py-16">
               <Handbag size={80} className="mx-auto mb-6 text-gray-300" />
@@ -127,5 +128,6 @@ export default function OrderPanel({
         </div>
       </div>
     </div>
+    </main>
   );
 }

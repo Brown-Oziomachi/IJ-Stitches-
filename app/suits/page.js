@@ -11,8 +11,8 @@ export default function SuitsPage() {
 
     return (
         <div className="container mx-auto px-4 py-12 text-black">
-            <h1 className="text-5xl font-bold mb-4 text-gray-900 mt-30">{categoryTitles.suits}</h1>
-            <p className="text-gray-600 mb-12 text-lg">Showcasing {items.length} custom designs</p>
+            <h1 className="text-5xl text-center font-bold mb-4 bg-gradient-to-r from-amber-600 to-orange-600 bg-clip-text text-transparent mt-30">{categoryTitles.suits}</h1>
+            <p className="text-gray-600 mb-12 text-lg text-center">Showcasing {items.length} custom designs</p>
             <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-8">
                 {items.map(item => (
                     <PortfolioCard key={item.id} item={item} requestOrder={requestOrder} onViewItem={handleViewItem} />

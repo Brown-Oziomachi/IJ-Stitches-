@@ -35,7 +35,7 @@ export default function PortfolioCard({ item, requestOrder, onViewItem }) {
         </button>
         <button
           onClick={handleRequestOrder}
-          className="absolute bottom-4 left-4 right-4 bg-gradient-to-r from-amber-900 via-amber-800 to-amber-900 text-white py-3 opacity-100 md:opacity-0 md:group-hover:opacity-100 transition hover:from-black hover:to-gray-900 font-bold"
+          className="absolute bottom-4 left-4 right-4 bg-gradient-to-r from-amber-900 via-amber-800 to-amber-900 text-white py-3 opacity-100 lg:opacity-0 md:group-hover:opacity-100 transition hover:from-black hover:to-gray-900 font-bold"
         >
           REQUEST THIS DESIGN
         </button>

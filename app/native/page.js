@@ -24,7 +24,7 @@ export default function NativePage() {
                 <p className="text-center text-gray-600 mb-12 text-lg">
                     Showcasing {items.length} custom designs
                 </p>
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-10">
                     {items.map(item => (
                         <PortfolioCard
                             key={item.id}
@@ -36,8 +36,21 @@ export default function NativePage() {
                 </div>
 
                 {/* Didn't Find Design Section */}
-                <div className="mt-16 bg-gray-50 rounded-2xl shadow-lg p-8 md:p-12 text-center border border-orange-100">
+                <div className="flex justify-center">
+                    <a
+                        href="/nativeplus"
+                        className="bg-gradient-to-r from-amber-900 via-amber-800 to-amber-900 
+                        text-white py-4 px-7 font-bold text-center 
+                        hover:bg-gradient-to-r hover:from-amber-800 hover:via-amber-700 hover:to-amber-800
+                        rounded-lg"
+                    >
+                        MORE DESIGNS
+                    </a>
+                </div>
+
+                <div className="mt-16 bg-amber-50 rounded-2xl shadow-lg p-8 md:p-12 text-center border border-orange-100">
                     <div className="max-w-2xl mx-auto">
+
                         <h2 className="text-3xl font-bold text-gray-800 mb-4">
                             Didn't Find What You're Looking For?
                         </h2>
@@ -47,11 +60,12 @@ export default function NativePage() {
                         </p>
                         <button
                             onClick={handleWhatsAppContact}
-                            className="inline-flex items-center cursor-pointer gap-3 max-md:text-sm bg-gradient-to-r from-amber-600 to-orange-600 text-white px-8 py-4 rounded-full font-semibold text-lg hover:from-amber-700 hover:to-orange-700 transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl"
+                            className="inline-flex items-center cursor-pointer gap- max-md:text-xs bg-gradient-to-r from-amber-600 to-orange-600 text-white  rounded-lg py-2 px-5 font-semibold text-lg hover:from-amber-700 hover:to-orange-700 transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl"
                         >
+                            Discuss Design on WhatsApp
                             <MessageCircle size={24} />
-                            Discuss Custom Design on WhatsApp
                         </button>
+                        
                     </div>
                 </div>
             </div>

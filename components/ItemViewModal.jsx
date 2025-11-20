@@ -63,7 +63,7 @@ export default function ItemViewModal({ item, onClose, requestOrder }) {
 
             {/* Scrollable Product Info Section */}
             <div className="text-black flex flex-col p-8 overflow-y-auto py-2">
-              <h2 className="text-3xl font-bold mb-2 text-gray-900  text-center lg:mt-50">
+              <h2 className="text-3xl font-bold mb-2 text-gray-900  text-center lg:mt-50 max-lg:mt-25">
                 {item.title && item.title.trim() !== ""
                   ? item.title
                   : `Custom ${

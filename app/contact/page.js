@@ -2,7 +2,7 @@ import { Mail, Phone, MapPin, Facebook } from "lucide-react";
 
 export default function ContactPage() {
     return (
-        <div className="min-h-screen bg-gray-50">
+        <div className="min-h-screen bg-gradient-to-br from-amber-50 via-orange-50 to-red-50">
             <div className="grid md:grid-cols-2 min-h-screen lg:px-24 lg:py-44 max-md:px-5 max-lg:py-40">
                 {/* Left Side - Image */}
                 <div className="relative bg-gray-200">

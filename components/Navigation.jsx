@@ -18,7 +18,8 @@ export default function Navigation() {
     { href: "/shirts", label: "SHIRTS" },
     // { href: "/trousers", label: "TROUSERS" },
     { href: "/suits", label: "SUITS" },
-    { href: "/native", label: "NATIVE WEAR" },
+    { href: "/native", label: "NATIVE" },
+    { href: "/videos", label: "VIDEOS" },
     { href: "/about", label: "ABOUT" },
     { href: "/contact", label: "CONTACT" },
   ];
@@ -110,7 +111,7 @@ export default function Navigation() {
       </nav>
 
       {/* Announcement Bar */}
-      <div className="bg-gradient-to-r from-amber-900 via-amber-800 to-amber-900 text-white py-3 sm:py-5 overflow-hidden fixed top-[72px] sm:top-[88px] left-0 right-0 z-40">
+      <div className="bg-gradient-to-r from-amber-900 via-amber-800 to-amber-900 text-white py-5 sm:py-5 overflow-hidden fixed top-[72px] sm:top-[88px] left-0 right-0 z-40">
         <div className="animate-scroll whitespace-nowrap">
           <span className="inline-block px-4 text-xs sm:text-sm md:text-base">
             Our Office is now opened! - Visit us at 106, Cameroon Road Aba,

@@ -61,8 +61,8 @@ export default function HomePage() {
   return (
     <div>
       {/* HERO SECTION */}
-      <div className="relative h-screen overflow-hidden ">
-        <div className="absolute inset-0 max-md:mt-35 ">
+      <div className="relative h-screen overflow-hidden mb-10">
+        <div className="absolute inset-0 max-md:mt-30 ">
           <img
             src="/5.jpg"
             alt="IJ Stitches"
@@ -88,7 +88,7 @@ export default function HomePage() {
               <div className="flex flex-wrap gap-4">
                 <Link
                   href="/portfolio"
-                  className="bg-gradient-to-r from-amber-900 via-amber-800 to-amber-900 text-white px-10 py-4 text-lg font-bold hover:bg-amber-300 transition shadow-2xl rounded"
+                  className="bg-gradient-to-r from-amber-900 via-amber-800 to-amber-900 text-white px-7 py-4 text-lg font-bold hover:bg-amber-300 transition shadow-2xl rounded"
                 >
                   VIEW PORTFOLIO
                 </Link>
@@ -100,10 +100,13 @@ export default function HomePage() {
                   GET IN TOUCH
                 </Link>
               </div>
+        <div className="absolute top-40 hidden md:block right-0 gap-10 lg:flex gap-4 mr-5 ">
+          <h1 className=" font-bold bg-gradient-to-r from-amber-600 via-amber-700 to-amber-800 bg-clip-text text-transparent animate-pulse">+234 813 081 1263</h1>
+          <h1 className=" font-bold bg-gradient-to-r from-amber-800 via-amber-700 to-amber-600 bg-clip-text text-transparent ">jeecee54@gmail.com</h1>
+        </div>
             </div>
           </div>
         </div>
-
         <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 text-white animate-bounce">
           <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
@@ -306,7 +309,7 @@ export default function HomePage() {
                   CRAFTSMANSHIP IN ACTION
                 </h3>
                 <Link
-                  href="/portfolio"
+                  href="/videos"
                   className="text-sm text-black font-semibold hover:underline inline-flex items-center gap-2"
                 >
                   VIEW FULL PORTFOLIO →

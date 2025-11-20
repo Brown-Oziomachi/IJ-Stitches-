@@ -65,6 +65,7 @@ export default function OrderRequestPage() {
                                 required
                                 className="w-full border-2 border-gray-300 p-4 rounded-lg focus:border-black focus:outline-none transition"
                                 value={formData.name}
+                                placeholder="Enter your full name"
                                 onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                             />
                         </div>
@@ -75,6 +76,7 @@ export default function OrderRequestPage() {
                                 required
                                 className="w-full text-black border-2 border-gray-300 p-4 rounded-lg focus:border-black focus:outline-none transition"
                                 value={formData.email}
+                                placeholder="Enter your email"
                                 onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                             />
                         </div>
@@ -85,6 +87,7 @@ export default function OrderRequestPage() {
                                 required
                                 className="w-full text-black border-2 border-gray-300 p-4 rounded-lg focus:border-black focus:outline-none transition"
                                 value={formData.phone}
+                                placeholder="Enter your number"
                                 onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                             />
                         </div>
@@ -95,6 +98,7 @@ export default function OrderRequestPage() {
                                 className="w-full text-black border-2 border-gray-300 p-4 rounded-lg focus:border-black focus:outline-none transition"
                                 rows="3"
                                 value={formData.address}
+                                placeholder="Enter your address"
                                 onChange={(e) => setFormData({ ...formData, address: e.target.value })}
                             />
                         </div>
@@ -105,6 +109,7 @@ export default function OrderRequestPage() {
                                 required
                                 className="w-full text-black border-2 border-gray-300 p-4 rounded-lg focus:border-black focus:outline-none transition"
                                 value={formData.state}
+                                placeholder="Enter your state"
                                 onChange={(e) => setFormData({ ...formData, state: e.target.value })}
                             />
                         </div>
