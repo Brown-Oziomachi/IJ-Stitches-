@@ -9,17 +9,17 @@ export default function ItemViewModal({ item, onClose, requestOrder }) {
 
   return (
     <div
-      className="fixed inset-0 bg-white bg-opacity-80 z-50 flex items-center justify-center p-4"
+      className="fixed inset-0  bg-gradient-to-br from-amber-50 via-orange-50 to-red-50 bg-opacity-80 z-50 flex items-center justify-center p-4"
       onClick={onClose}
     >
       <div
-        className="bg-white max-w-6xl w-full max-h-[90vh] overflow-hidden"
+        className=" max-w-6xl w-full max-h-[90vh] overflow-hidden"
         onClick={(e) => e.stopPropagation()}
       >
         <div className="relative">
           <button
             onClick={onClose}
-            className="absolute top-4 right-4 bg-white text-black p-3 hover:bg-gray-100 z-10"
+            className="absolute bg-white top-0 right-0 text-black p-3 hover:bg-gray-100 z-10"
           >
             <X size={24} />
           </button>
@@ -62,8 +62,8 @@ export default function ItemViewModal({ item, onClose, requestOrder }) {
             </div>
 
             {/* Scrollable Product Info Section */}
-            <div className="text-black flex flex-col p-8 overflow-y-auto py-2">
-              <h2 className="text-3xl font-bold mb-2 text-gray-900  text-center lg:mt-50 max-lg:mt-25">
+            <div className="text-black flex flex-col p-8 overflow-y-auto py-2  bg-gradient-to-br from-amber-50 via-orange-50 to-red-50">
+              <h2 className="text-3xl font-bold mb-2 text-gray-900  text-center lg:mt-50 max-md:mt-2 max-lg:mt-25">
                 {item.title && item.title.trim() !== ""
                   ? item.title
                   : `Custom ${
@@ -71,8 +71,8 @@ export default function ItemViewModal({ item, onClose, requestOrder }) {
                       item.category.slice(1)
                     }`}
               </h2>
-              <div className="mb-8 space-y-4">
-                <div className="bg-gray-50 p-6 rounded-lg">
+              <div className="mb-8 space-y-4 ">
+                <div className=" p-6 rounded-lg">
                   <h3 className="font-bold mb-3 text-lg">
                     IJ Stitches Tailoring Service
                   </h3>
